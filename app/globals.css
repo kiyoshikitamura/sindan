@@ -1,26 +1,43 @@
 @import "tailwindcss";
 
+@theme {
+  --font-sans: var(--font-noto-sans-jp);
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #fff0f5; /* Lavender Blush (Baby Pink-ish) */
+  --foreground: #1a1a1a;
+  
+  --color-baby-pink: #FFB6C1;
+  --color-neon-pink: #FF1493;
+  --color-pastel-purple: #E0B0FF;
+  --color-dark-gray: #333333;
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  
+  /* 薄いドット柄の背景 */
+  background-image: 
+    radial-gradient(var(--color-baby-pink) 2px, transparent 2px),
+    radial-gradient(var(--color-baby-pink) 2px, transparent 2px);
+  background-size: 40px 40px;
+  background-position: 0 0, 20px 20px;
+}
+
+/* スクロールバーのカスタマイズ（可愛らしく） */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #FFF;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-baby-pink);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-neon-pink);
 }
