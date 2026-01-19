@@ -14,11 +14,13 @@ import { ShareButtons } from '@/components/ui/ShareButtons';
 
 import { renaiDiagnosis } from '@/data/renai';
 import { furindoDiagnosis } from '@/data/furindo';
+import { aisaredoDiagnosis } from '@/data/aisaredo';
 
 const diagnosisMap: Record<string, DiagnosisData> = {
     yorushoku: yorushokuDiagnosis,
     renai: renaiDiagnosis,
     furindo: furindoDiagnosis,
+    aisaredo: aisaredoDiagnosis,
 };
 
 export default function ShindanPage({ params }: { params: Promise<{ id: string }> }) {

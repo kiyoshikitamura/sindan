@@ -2,10 +2,11 @@ import Link from 'next/link';
 import { yorushokuDiagnosis } from '@/data/yorushoku';
 import { renaiDiagnosis } from '@/data/renai';
 import { furindoDiagnosis } from '@/data/furindo';
+import { aisaredoDiagnosis } from '@/data/aisaredo';
 import { Card } from '@/components/ui/Card';
 
 export default function Home() {
-  const diagnoses = [yorushokuDiagnosis, renaiDiagnosis, furindoDiagnosis];
+  const diagnoses = [yorushokuDiagnosis, renaiDiagnosis, furindoDiagnosis, aisaredoDiagnosis];
 
   return (
     <div className="min-h-screen p-6 sm:p-20 relative overflow-hidden">
